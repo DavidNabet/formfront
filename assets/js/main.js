@@ -6,10 +6,10 @@ $.addEventListener("DOMContentLoaded", () => {
     e.preventDefault();
     const data = {
       firstname: $.querySelector("#firstname").value,
-      lastname: document.querySelector("#lastname").value,
-      email: document.querySelector("#email").value,
-      subject: document.querySelector("#subject").value,
-      message: document.querySelector("#message").value,
+      lastname: $.querySelector("#lastname").value,
+      email: $.querySelector("#email").value,
+      subject: $.querySelector("#subject").value,
+      message: $.querySelector("#message").value,
     };
     // console.log(data);
     const response = await axios.post(
