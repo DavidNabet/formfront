@@ -12,7 +12,10 @@ $.addEventListener("DOMContentLoaded", () => {
       message: document.querySelector("#message").value,
     };
     // console.log(data);
-    const response = await axios.post("http://localhost:3000/form", data);
+    const response = await axios.post(
+      "https://form-back-project.herokuapp.com/form",
+      data
+    );
     if (response.data) {
       alert("Votre soumission a bien été effectué");
     }
