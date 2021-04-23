@@ -11,8 +11,11 @@ $.addEventListener("DOMContentLoaded", () => {
       subject: document.querySelector("#subject").value,
       message: document.querySelector("#message").value,
     };
-    console.log(data);
+    // console.log(data);
     const response = await axios.post("http://localhost:3000/form", data);
-    console.log(response);
+    if (response.data) {
+      alert("Votre soumission a bien été effectué");
+    }
+    // console.log(response);
   });
 });
