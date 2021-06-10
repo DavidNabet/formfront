@@ -12,37 +12,45 @@
 </head>
 <body>
     <div class="container">
-        <h1>Formulaire de contact</h1>
-        <form action="/form" method="POST" id="contact-form">
-            <input
-                type="text"
-                id="firstname"
-                placeholder="Prénom"
-                name="firstname"
-                required />
-            <input 
-                type="text"
-                id="lastname"
-                placeholder="Nom"
-                name="lastname"
-                required />
-            <input
-                type="email"
-                id="email"
-                placeholder="Email"
-                name="email"
-                required />
-            <input 
-                type="text"
-                id="subject"
-                placeholder="Sujet"
-                name="subject"
-                required />
-            <textarea 
-                name="message"
-                id="message"
-                placeholder="Votre message ici..."></textarea>
+        <form method="POST">
+            <h1>Formulaire de contact</h1>
+            <div class="form-group">
+                <input
+                    type="text"
+                    placeholder="Prénom"
+                    name="firstname"
+                    required />
+            </div>
+            <div class="form-group">
+                <input 
+                    type="text"
+                    placeholder="Nom"
+                    name="lastname"
+                    required />
+            </div>
+            <div class="form-group">
+                <input
+                    type="email"
+                    placeholder="Email"
+                    name="email"
+                    required />
+            </div>
+            <div class="form-group">
+                <input 
+                    type="text"
+                    placeholder="Sujet"
+                    name="subject"
+                    required />
+            </div>
+            <div class="form-group">
+                <textarea 
+                    name="message"
+                    placeholder="Votre message ici..."
+                    required
+                    ></textarea>
+            </div>
             <input type="submit" value="Envoyer le message">
+            <!-- <button type="submit">Envoyer le message</button> -->
         </form>
     </div>
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
